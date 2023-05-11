@@ -6,9 +6,8 @@ module.exports = {
   // so we default back to the standard build output.
   server: process.env.NODE_ENV === "development" ? undefined : "./server.ts",
   serverBuildPath: "api/index.js",
-  // appDirectory: "app",
-  // assetsBuildDirectory: "public/build",
-  // publicPath: "/build/",
+  // @todo: check whether vercel still needs: serverModuleFormat: "cjs",
+  serverModuleFormat: "cjs",
   future: {
     v2_errorBoundary: true,
     v2_meta: true,
