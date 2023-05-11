@@ -4,8 +4,17 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
+    "fix": "npm run format && npm run lint -- --fix",
+    "format": "prettier --write .",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "typecheck": "tsc"
   },
+  "prettier": {},
+  "eslintIgnore": [
+    "/node_modules",
+    "/build",
+    "/public/build"
+  ],
   "dependencies": {
     "@remix-run/css-bundle": "^1.16.0",
     "@remix-run/node": "^1.16.0",
@@ -20,9 +29,12 @@
     "@remix-run/dev": "^1.16.0",
     "@remix-run/eslint-config": "^1.16.0",
     "@remix-run/serve": "^1.16.0",
+    "@types/eslint": "^8.37.0",
     "@types/react": "^18.0.35",
     "@types/react-dom": "^18.0.11",
     "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
     "typescript": "^5.0.4"
   },
   "engines": {
