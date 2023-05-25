@@ -4,8 +4,18 @@ export const meta: V2_MetaFunction = () => [{ title: "Sudo Room Thursday" }];
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+    <div
+      style={{
+        fontFamily: "system-ui, sans-serif",
+        lineHeight: "1.4",
+        maxWidth: "65ch",
+        marginInline: "auto",
+      }}
+    >
+      <h1>Welcome to Sudo Room Thursday</h1>
+      <p>
+        <em>Everything, everywhere, at once.</em>
+      </p>
       <ul>
         <li>
           <a
